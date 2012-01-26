@@ -22,7 +22,7 @@ for artifactNode in artifacts:
 #	node = artifacts.getElementsByTagName(name)
 #	print node[0].toxml()
 
-#print artifacts.toxml()
+print artifacts.toxml()
 
 #Abrir xml remoto
 #remoteXML = openAnything('http://scmartifacts.duncllc.com/orbitzlibs/fqa01.releases.xml')

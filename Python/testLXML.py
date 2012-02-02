@@ -1,18 +1,44 @@
 from lxml import etree
+import urllib
+from functionsUpdateEnviroment import *
 
-#Lee el XMl y loc arga en el arbol
-originalDocument = etree.parse ( 'test.xml' )
+#Open and parse local XML
+xmlDocument = openAnything('mappingUpdate.xml')
+parsedXML = etree.parse( xmlDocument )
+xmlDocument.close()
 
-nombre = originalDocument.findall ( "Root/source/name" )
-test = "come caca \n"
+#Open and parse remote XML
+remoteXML = openAnything('http://scmartifacts.duncllc.com/orbitzlibs/fqa01.releases.xml')
+parsedRemoteXML = etree.parse( remoteXML )
+remoteXML.close()
 
-print (originalDocument.Root)
+remoteArtifacts = parsedRemoteXML.findall('artifact')
 
-print nombre 
-print test
+#print etree.tostring(parsedXML)
+#for elt in parsedXML.getiterator():
+#	print elt.tag
 
-#Crea el docuemnto y lo abre para escritura
-outputDocument = open ( 'homemade.xml', 'w' )
 
-#Escribe los cambios en el xml
-originalDocument.write ( outputDocument )
+localArtifacts = parsedXML.findall('artifact')
+for localArtifact in localArtifacts:
+	localName = localArtifact.attrib['name']
+	localVersion = localArtifact.attrib['lastUpdate']
+	for remoteArtifact in remoteArtifacts:
+		if "artifactname" in remoteArtifact.keys():	
+			if remoteArtifact.attrib['artifactname'] == localName:
+				remoteVersion = remoteArtifact.attrib['version']
+				if localVersion < remoteVersion:
+					print "Antes: " + remoteArtifact.attrib['artifactname'] + " " + remoteArtifact.attrib['version'] + " " + localVersion + "\n"
+					
+					tempXML = openAnything(localArtifact.attrib['destination'])
+					tempParsedXML = etree.parse(tempXML)
+					
+					print tempParsedXML.find( "pool/artifact_version")
+
+					print version.text
+					
+					localArtifact.set ( 'lastUpdate' , remoteVersion )
+
+#Write The mapping XML with the new data
+destinationXML = open('mappingUpdate.xml', 'w')
+parsedXML.write(destinationXML)

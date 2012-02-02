@@ -4,111 +4,40 @@
 
 <!-- This is the template for every object to be monitorized:
 
-	<source type="yodaElement">
-		<name></name>
-		<rssLocation></rssLocation>
-		<destination></destination>
-		<description></description>
-                <lastUpdate></lastUpdate>
-	</source>
+	<artifact 
+		type="yodaElement" 
+		name="" name="name of the artifact" 
+		rssLocation="Location of the RSS provided by Yoda" 
+		destination="Location of the artifact definition in the local repository" 
+		description="A short description of the artifact" 
+		lastUpdate="Last version updated by the script"
+	/>
 
 -->
 
 <Root>
-	<source type="yodaElement">
-        	<name>orbitz-host-apollo-hotel</name>
-		<rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=269</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/apollo-hotel.xml</destination>
-		<description></description>
-		<lastUpdate>18.42</lastUpdate>
-	</source>
+	<artifact type="yodaElement" name="orbitz-host-apollo-hotel" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=269" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/apollo-hotel.xml" description="" lastUpdate="18.42" />
 
-	<source type="yodaElement">
-		<name>orbitz-host-hbe</name>
-		<rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=1939</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/hbe-austin.xml</destination>
-		<description></description>
-                <lastUpdate>20.183</lastUpdate>
-        </source>
+	<artifact type="yodaElement" name="orbitz-host-hbe" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=1939" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/hbe-austin.xml" description="" lastUpdate="20.183" />
 
-        <source type="yodaElement">
-		<name>orbitz-host-het</name>
-		<rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=2394</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/het.xml</destination>
-		<description></description>
-                <lastUpdate>11.35</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-het" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=2394" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/het.xml" description="" lastUpdate="11.35" />
 
-        <source type="yodaElement">
-                <name>orbitz-host-hse</name>
-                <rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=138</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/hse-austin.xml</destination>
-                <description>artifact="orbitz-host-hse" name="hse-austin"</description>
-                <lastUpdate>20.261.1</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-hse" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=138" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/hse-austin.xml" description="" lastUpdate="20.261.1" />
 
-        <source type="yodaElement">
-		<name>orbitz-host-pegasus</name>
-		<rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=84</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/pegasus.xml</destination>
-		<description></description>
-                <lastUpdate>21.35</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-pegasus" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=84" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/pegasus.xml" description="" lastUpdate="21.35" />
 
-        <source type="yodaElement">
-		<name>orbitz-host-sort</name>
-		<rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=2874</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/sort.xml.bak</destination>
-		<description></description>
-                <lastUpdate>1.25</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-sort" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=2874" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/sort.xml.bak" description="" lastUpdate="1.25" />
 
-        <source type="yodaElement">
-		<name>orbitz-host-tbs-txn</name>
-		<rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=983</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/tbs-txn.xml</destination>
-		<description></description>
-                <lastUpdate>28.22.7</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-tbs-txn"	rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=983" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/tbs-txn.xml" description="" lastUpdate="28.22.7" />
 
-        <source type="yodaElement">
-		<name>orbitz-host-gash-us</name>
-		<rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=3171</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/gash-us.xml</destination>
-		<description></description>
-                <lastUpdate>34.93</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-gash-us" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=3171"	destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/gash-us.xml" description="" lastUpdate="34.93" />
 
-        <source type="yodaElement">
-		<name>orbitz-host-gta</name>
-		<rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=136</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/gta.xml</destination>
-		<description></description>
-                <lastUpdate>20.37</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-gta" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=136" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/gta.xml" description="" lastUpdate="20.37" />
 
-        <source type="yodaElement">
-		<name>orbitz-host-hilton</name>
-		<rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=1307</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/hilton.xml</destination>
-		<description></description>
-                <lastUpdate>15.30</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-hilton" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=1307" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/hilton.xml" description="" lastUpdate="15.30" />
 
-        <source type="yodaElement">
-                <name>orbitz-host-pdn</name>
-                <rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=135</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/pdn.xml</destination>
-                <description></description>
-                <lastUpdate>20.67</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-pdn" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=135" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/pdn.xml" description="" lastUpdate="20.67" />
 
-        <source type="yodaElement">
-                <name>orbitz-host-tbs-shop</name>
-                <rssLocation>http://yoda.orbitz.net/artifact/rss.atom?artifact_id=982</rssLocation>
-		<destination>/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/tbs-shop.xml</destination>
-                <description></description>
-                <lastUpdate>28.22.7</lastUpdate>
-        </source>
+        <artifact type="yodaElement" name="orbitz-host-tbs-shop" rssLocation="http://yoda.orbitz.net/artifact/rss.atom?artifact_id=982" destination="/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC/tbs-shop.xml" description="" lastUpdate="28.22.7" />
 
 </Root>

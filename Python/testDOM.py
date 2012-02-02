@@ -14,15 +14,17 @@ xmlDocument.close()
 root = parsedXML.childNodes[2]
 artifacts = root.childNodes
 
-for artifactNode in artifacts:
-	artifactNode.childNodes
-
+for i in range (0, len(artifacts)-1):
+	#print artifacts[i].toxml()
+	artifactData = artifacts[i].childNodes
+	if artifactData.isEmpty():
+		print artifactData[1].toxml()
 
 #for artifact in artifactsArray:
 #	node = artifacts.getElementsByTagName(name)
 #	print node[0].toxml()
 
-print artifacts.toxml()
+
 
 #Abrir xml remoto
 #remoteXML = openAnything('http://scmartifacts.duncllc.com/orbitzlibs/fqa01.releases.xml')

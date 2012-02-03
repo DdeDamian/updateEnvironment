@@ -13,3 +13,17 @@ def openAnything(source):
 	# treat source as string
 	import StringIO
 	return StringIO.StringIO(str(source))
+
+def updateDependencies(remoteArtifact, localArtifact):
+	newDependencies = remoteArtifact.findall('config')
+        oldDependencies = localArtifact.findall('config_bundle/config')
+        for newDependence  in newDependencies:
+        	for oldDependence in oldDependencies:
+                	if newDependence.attrib['artifactname'] == oldDependence.attrib['name']:
+                        	dep = newDependence.attrib['artifactname']
+                                new = newDependence.attrib['version']
+                                old = oldDependence.attrib['version']
+                                if new > old:
+                                	print dep + ": " + " old: " + old  + " new: " + new
+                                        oldDependence.attrib['version'] = new
+

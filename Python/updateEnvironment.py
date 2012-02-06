@@ -43,6 +43,6 @@ destinationXML = open('mappingUpdate.xml', 'w')
 parsedXML.write(destinationXML)
 
 #Create a link to the git repository and make the commit
-#repository = git.Git("/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC")
-#result = repository.execute(["git", "commit", "-a", "-m", "'First script commit'"])
-#print result
+repository = git.Git("/home/dvelazquez/orbitz-fabrics/fabric-HDP_POC")
+result = repository.execute(["git", "commit", "-a", "-m", "'First script commit'"])
+print result
